@@ -15,6 +15,9 @@ Land* getRandomLand(){
         case DESERT:
             return new Desert;
             break;
+        case JUNGLE:
+            return new Jungle;
+            break;
         default:
             return new Lake;
             break;
@@ -89,5 +92,18 @@ string Desert::visit(Player& p){
     
     p.setThirst(p.getThirst() - 1);
 
+    return description;
+}
+
+string Jungle::getShortDescription(){
+    return "jungle";
+}
+
+string Jungle::getLongDescription(){
+    return "You arrive at a dense humid jungle.";
+}
+
+string Jungle::visit(Player& p){
+    string description = "To be filled in later";
     return description;
 }

@@ -7,7 +7,7 @@
 
 using namespace std;
 
-enum LandTypes {LAKE, FOREST, DESERT, MAX_NUM_LANDS};
+enum LandTypes {LAKE, FOREST, DESERT, JUNGLE, MAX_NUM_LANDS};
 
 class Land {
     public:
@@ -37,6 +37,15 @@ class Forest : public Land {
 };
 
 class Desert : public Land {
+    public:
+    string getShortDescription();
+    string getLongDescription();
+    string visit(Player &p);
+    
+    private:
+};
+
+class Jungle : public Land {
     public:
     string getShortDescription();
     string getLongDescription();
