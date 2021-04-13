@@ -1,5 +1,7 @@
 #include <iostream>
 #include <algorithm>
+#include <stdlib.h>
+#include <time.h>
 #include "lands.h"
 #include "player.h"
 
@@ -40,6 +42,8 @@ bool getPlayerInput(PlayerChoice &playerChoice){
 
 
 int main(){
+    srand(time(0));
+    
     const unsigned int MAP_SIZE = 20;
     Player player(Player::DEFAULT_HEALTH, 
                   Player::DEFAULT_HUNGER, 
